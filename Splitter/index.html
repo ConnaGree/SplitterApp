@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/9a1dc8009d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splitter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-container">
+        <img src="images/logo.svg" alt="" />
+      </div>
+      <div class="calc-dashboard">
+        <div class="left-dash">
+          <div class="bill-field">
+            <input id="bill" type="text" placeholder="0" />
+          </div>
+          <div class="tip-buttons">
+            <button class="tips perc-5" value="0.05">5%</button>
+            <button class="tips perc-10" value="0.1">10%</button>
+            <button class="tips perc-15" value="0.15">15%</button>
+            <button class="tips perc-25" value="0.25">25%</button>
+            <button class="tips perc-50" value="0.5">50%</button>
+            <input id="custome" type="text" placeholder="custome" />
+          </div>
+          <div class="person-field">
+            <input id="number-person" type="text" placeholder="0" />
+          </div>
+          <button class="calculate">Calculate</button>
+        </div>
+        <div class="right-dash">
+          <div class="tip-amount">
+            <span class="text">Tip Amount</span>
+            <span class="value tip-v"><span>$</span>0.00</span>
+          </div>
+          <div class="total">
+            <span class="text">Total</span>
+            <span class="value total-v"><span>$</span>0.00</span>
+          </div>
+          <button class="reset">reset</button>
+        </div>
+      </div>
+	  <p>*After adding custome tip values, hit 'Enter'</p>
+    </div>
+    <script src="splitter.js"></script>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+/* 
+    body-color: rgb(197,228,231)
+    right-display and primary-btn: rgb(0,71,75)
+    btn-hover: rgb(159,232,223)
+ */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "JetBrains Mono", monospace;
+}
+
+:root {
+  --bodyclr: rgb(197, 228, 231);
+  --displayclr: rgb(0, 71, 75);
+  --hoverclr: rgb(159, 232, 223);
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: var(--bodyclr);
+}
+
+.logo-container {
+  text-align: center;
+}
+img {
+  margin: 50px 0;
+}
+.calc-dashboard {
+  gap: 40px;
+  width: 700px;
+  height: 400px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  padding: 10px 25px;
+  background: #f1f5f8;
+  border: none;
+  border-radius: 5px;
+  text-align: right;
+  font-family: inherit;
+}
+input:focus{
+	outline: none;
+}
+.left-dash {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+.bill-field {
+  position: relative;
+}
+.bill-field::before {
+  content: "Bill";
+  margin-bottom: 3px;
+  display: block;
+  font-size: 0.85rem;
+}
+.bill-field input {
+  width: 100%;
+  font-size: 1.1rem;
+}
+.tip-buttons {
+  margin: 35px 0 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+.tip-buttons::before {
+  content: "Select Tip %";
+  margin-bottom: 5px;
+  display: block;
+  font-size: 0.85rem;
+  position: absolute;
+  top: -20px;
+}
+.tip-buttons button {
+  flex-basis: 30%;
+}
+.tip-buttons button:hover {
+  background: rgb(37, 169, 153);
+}
+.tip-buttons button:focus {
+  background: rgb(37, 169, 153);
+}
+.tip-buttons input {
+  width: 94px;
+  height: 40px;
+  align-self: center;
+}
+button {
+  margin: 5px 0;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--displayclr);
+}
+#custome{
+	font-family: inherit;
+	padding: 5px;
+	text-align: center;
+}
+.person-field input {
+  width: 100%;
+  font-size: 1.1rem;
+}
+.person-field::before {
+  content: "Number of people";
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+.calculate {
+  margin-top: 20px;
+}
+
+/* right dash */
+.right-dash {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px;
+  background: var(--displayclr);
+  border-radius: 5px;
+  color: #fff;
+}
+.right-dash .tip-amount {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 30px 0;
+}
+.right-dash .tip-amount .text,
+.right-dash .total .text {
+  font-size: 0.8rem;
+}
+.right-dash .tip-amount .text::after {
+  content: "/ person";
+  display: block;
+  margin-top: 7px;
+  opacity: 0.75;
+}
+.right-dash .total .text::after {
+  content: "/ person";
+  display: block;
+  margin-top: 7px;
+  opacity: 0.75;
+}
+.right-dash .tip-amount .value,
+.right-dash .total .value {
+  font-size: 2rem;
+  color: rgb(37, 169, 153);
+}
+/* .right-dash .tip-amount .value span,
+.right-dash .total .value span {
+  font-size: 0.8rem;
+} */
+.right-dash .total {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+.right-dash button {
+  justify-self: flex-end;
+  width: 100%;
+  background: var(--hoverclr);
+  margin-top: 90px;
+  color: var(--displayclr);
+}
+p{
+	text-align: center;
+	padding: 20px 0;
+	color: green;
+}
+
+/* Media Query */
+@media only screen and (max-width: 400px) {
+  .calc-dashboard {
+    flex-direction: column;
+    width: 100%;
+  }
+  .left-dash,
+  .right-dash {
+    min-width: 400px;
+  }
+}
